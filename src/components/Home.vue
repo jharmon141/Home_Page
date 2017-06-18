@@ -9,7 +9,7 @@
 
             <div class="animated slideInUp column is-5">
                 <h2>&lt;About Me/&gt;</h2>
-                <p>Hello! My name is Jeremy. I'm from Austin, TX and I'm a full stack web developer with experience using technologies such as Vue.js, React.js, Ember.js, MySQL, GraphQL, MongoDB, and many more! Please check out some of my projects here and send me a line if you're interested in working together!</p>
+                <p>Hello! My name is Jeremy. I'm from Austin, TX and I'm a full stack web developer with experience using technologies such as Vue.js, React.js, Ember.js, Node.js, Express.js, MySQL, GraphQL, MongoDB, and many more! Please check out some of my projects here and send me a line if you're interested in working together!</p>
             </div>
 
         </div>
@@ -23,7 +23,7 @@
 
 </script>
 
-<style>
+<style scoped>
 
 img {
     margin-top: 30px;
@@ -39,8 +39,13 @@ h2 {
 
 p {
     text-align: left;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 35px;
+    margin-left: 5px;
+}
+
+p:hover {
+    background-color: cyan;
 }
 
 h1 {
@@ -48,7 +53,7 @@ h1 {
 }
 
 .columns {
-    margin-top: 75px;
+    margin-top: 16%;
 }
 </style>
 <style src="animate.css/animate.min.css"></style>
