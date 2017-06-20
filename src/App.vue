@@ -1,23 +1,21 @@
 <template>
+
   <div id="app">
+
       <nav class="nav">
           <div class="nav-left">
-              <router-link  :key="$route.path" to="/"><a :class="{ 'active': home } "class="nav-item home is-tab">&lt;Jeremy/&gt;</a></router-link>
+              <router-link  v-on:click.native="hideMenu" :key="$route.path" to="/"><a :class="{ 'active': home } "class="nav-item home is-tab">&lt;Jeremy/&gt;</a></router-link>
           </div>
 
-          <!-- This "nav-toggle" hamburger menu is only visible on mobile -->
-          <!-- You need JavaScript to toggle the "is-active" class on "nav-menu" -->
           <span @click="toggleMenu" class="nav-toggle">
               <span></span>
               <span></span>
               <span></span>
           </span>
 
-          <!-- This "nav-menu" is hidden on mobile -->
-          <!-- Add the modifier "is-active" to display it on mobile -->
           <div class="nav-right nav-menu" :class="menuActive">
-              <router-link  :key="$route.path" to="/projects"><a :class="{ 'active': projects } "class="nav-item projects is-tab">&lt;Projects/&gt;</a></router-link>
-              <router-link  :key="$route.path" to="/contact"><a :class="{ 'active': contact } "class="nav-item contact is-tab">&lt;Contact/&gt;</a></router-link>
+              <router-link v-on:click.native="hideMenu" :key="$route.path" to="/projects"><a  :class="{ 'active': projects } "class="nav-item projects is-tab">&lt;Projects/&gt;</a></router-link>
+              <router-link v-on:click.native="hideMenu" :key="$route.path" to="/contact"><a :class="{ 'active': contact } "class="nav-item contact is-tab">&lt;Contact/&gt;</a></router-link>
 
           </div>
       </nav>
@@ -76,6 +74,10 @@ export default {
             } else {
                 this.menuActive = ''
             }
+        },
+
+        hideMenu() {
+            this.menuActive = ''
         }
     }
 
@@ -139,30 +141,30 @@ a.nav-item.is-tab.home {
 
 .nav-item a.is-tab.home:hover, a.nav-item.is-tab.home:hover {
     border-bottom-color: white !important;
-    color: #fe0000;
+    color: tomato;
 }
     
 a.nav-item.is-tab.active.home {
-    color: #fe0000;
+    color: tomato;
 }
 
 .nav-item a.is-tab.projects:hover, a.nav-item.is-tab.projects:hover {
     border-bottom-color: white !important;
-    color: dodgerblue !important;
+    color: cornflowerblue !important;
 }
     
 a.nav-item.is-tab.active.projects {
     border-bottom-color: white !important;
-    color: dodgerblue !important;
+    color: cornflowerblue !important;
 }
 
 .nav-item a.is-tab.contact:hover, a.nav-item.is-tab.contact:hover {
-    color: #41b883 !important;
+    color: limegreen !important;
     border-bottom-color: white !important;
 }
     
 a.nav-item.is-tab.active.contact {
-    color: #41b883 !important;
+    color: limegreen !important;
     border-bottom-color: white !important;
 }
 
@@ -201,6 +203,15 @@ i:hover {
     background-color: white !important;
 }
 
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s;
+}
+
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active for <2.1.8 */ {
+  opacity: 0;
+  min-height: 100%;
+}
 </style>
 <style src="bulma/css/bulma.css"></style>
 <style src="animate.css/animate.min.css"></style>

@@ -25,6 +25,10 @@
 
 <style scoped>
 
+.columns {
+    margin-bottom: 20%;
+}
+
 img {
     margin-top: 30px;
     border-radius: 50%;
@@ -35,6 +39,10 @@ img {
 h2 {
     margin-bottom: 30px !important;
     font-size: 24px !important;
+}
+
+h2:hover {
+    color: orange;
 }
 
 p {
