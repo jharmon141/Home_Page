@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VeeValidate from 'vee-validate'
-import 'font-awesome/css/font-awesome.css'
+require('!style!css!sass!font-awesome/scss/font-awesome.scss')
 
 Vue.config.productionTip = false
 
