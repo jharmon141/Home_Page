@@ -1,0 +1,139 @@
+<template>
+
+    <div class="columns">
+
+        <div class="animated slideInUp column is-4 is-offset-1">
+            <h2>Send me a message!</h2>
+
+            <div class="content has-text-centered">
+                <a class="icon" href="https://github.com/jharmon141">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a class="icon" href="https://www.linkedin.com/in/jeremy-harmon-b5553212a/">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a class="icon" href="https://twitter.com/jspacemanjr">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="animated slideInDown column is-5">
+
+            <form>
+
+                <span class="error" v-show="errors.has('name')">{{ errors.first('name') }}</span>
+                <input :class="{ 'errorInput': errors.has('name') }" v-model="name" placeholder="Your Name" v-validate="'required'" type="text" name="name">
+                <br>
+                <span class="error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+                <input :class="{ 'errorInput': errors.has('email') }" v-model="email" placeholder="Your E-Mail Address" v-validate="'required|email'" type="text" name="email">
+                <br>
+                <span class="error" v-show="errors.has('message')">{{ errors.first('message') }}</span>
+                <textarea :class="{ 'errorInput': errors.has('message') }" v-model="message" placeholder="Message" v-validate="'required'" type="text" name="message"></textarea>
+                <br>
+                <span type="submit" class="button is-outlined is-danger" @click="submitMessage">&lt;Submit/&gt;</span>
+
+            </form>
+
+            
+
+        </div>
+
+    </div>
+
+</template>
+
+<script>
+
+export default {
+
+    name: 'Contact',
+
+    data: () => ({
+        name: '',
+        email: '',
+        message: '',
+    }),
+
+    methods: {
+
+        submitMessage() {
+            console.log(this.errors)
+
+        }
+
+    }
+
+}
+
+</script>
+
+<style scoped>
+
+.error {
+    color: red;
+    font-size: 12px;
+    text-align: left !important;
+}
+
+.errorInput {
+    outline-color: red;
+}
+
+input {
+    outline-color: green;
+}
+
+form {
+    margin-top: 75px;
+}
+
+.icon .fa {
+    font-size: 40px !important;
+}
+
+.icon {
+    width: 3rem;
+}
+
+.button {
+    width: 100%;
+    margin-bottom: 150px;
+    height: 50px !important;
+}
+
+input {
+    margin-bottom: 25px;
+    height: 50px;
+    font-size: 18px;
+    width: 100%;
+    padding: 9px;
+}
+
+textarea {
+    outline-color: green;
+    height: 200px;
+    width: 100%;
+    font-size: 18px;
+    border: solid 1px #bbb;
+    margin-bottom: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    padding: 9px;
+}
+
+h2 {
+    margin-top: 75px;
+    margin-bottom: 30px !important;
+    font-size: 24px !important;
+    text-align: center;
+}
+
+h2:hover {
+    color: orange;
+}
+
+i:hover {
+    color: cyan !important;
+}
+</style>

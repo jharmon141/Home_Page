@@ -4,12 +4,12 @@
         <div class="columns">
 
             <div class="animated slideInDown column is-4 is-offset-1">
-                <img height="250px" width="250px" src="../assets/photo.jpg">
+                <img height="250px" width="250px" src="../assets/IMG_0501 copy.jpg">
             </div>
 
             <div class="animated slideInUp column is-5">
                 <h2>&lt;About Me/&gt;</h2>
-                <p>Hello! My name is Jeremy. I'm from Austin, TX and I'm a full stack web developer with experience using technologies such as Vue.js, React.js, Ember.js, Node.js, Express.js, MySQL, GraphQL, MongoDB, and many more! Please check out some of my projects here and send me a line if you're interested in working together!</p>
+                <p>Hello! My name is Jeremy. I live in Austin, TX and I'm a full stack web developer with experience using technologies such as Vue.js, React.js, Ember.js, Node.js, Express.js, MySQL, GraphQL, MongoDB, and many more! Please check out some of my projects here and send me a line if you're interested in working together!</p>
             </div>
 
         </div>
@@ -30,15 +30,18 @@
 }
 
 img {
-    margin-top: 30px;
+    margin-top: 30px !important;
     border-radius: 50%;
     z-index: 1;
-    position: relative;
+    margin: auto;
+    display: block;
 }
+
 
 h2 {
     margin-bottom: 30px !important;
     font-size: 24px !important;
+    text-align: center;
 }
 
 h2:hover {
