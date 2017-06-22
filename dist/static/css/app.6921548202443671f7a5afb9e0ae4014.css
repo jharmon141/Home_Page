@@ -7,7 +7,10 @@ html{position:relative;min-height:100%}body{margin:0 0 95px}main{margin-top:10%}
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2016 Daniel Eden
- */.columns[data-v-5ed26d28]{margin-bottom:20%}img[data-v-5ed26d28]{margin-top:30px!important;border-radius:50%;z-index:1;margin:auto;display:block}h2[data-v-5ed26d28]{margin-bottom:30px!important;font-size:24px!important;text-align:center}h2[data-v-5ed26d28]:hover{color:orange}p[data-v-5ed26d28]{text-align:left;font-size:14px;line-height:35px;margin-left:5px}p[data-v-5ed26d28]:hover{background-color:cyan}h1[data-v-5ed26d28]{font-size:36px!important}.columns[data-v-5ed26d28]{margin-top:16%}
+ *//*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270{-webkit-filter:none}.columns[data-v-5ed26d28]{margin-bottom:20%}img[data-v-5ed26d28]{margin-top:30px!important;border-radius:50%;z-index:1;margin:auto;display:block}h2[data-v-5ed26d28]{margin-bottom:30px!important;font-size:24px!important;text-align:center}h2[data-v-5ed26d28]:hover{color:orange}p[data-v-5ed26d28]{text-align:left;font-size:14px;line-height:35px;margin-left:5px}p[data-v-5ed26d28]:hover{background-color:cyan}h1[data-v-5ed26d28]{font-size:36px!important}.columns[data-v-5ed26d28]{margin-top:16%}
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1

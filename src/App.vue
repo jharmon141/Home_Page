@@ -214,3 +214,4 @@ i:hover {
 </style>
 <style src="bulma/css/bulma.css"></style>
 <style src="animate.css/animate.min.css"></style>
+<style src="font-awesome/css/font-awesome.css"></style>
