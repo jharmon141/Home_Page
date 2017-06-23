@@ -28,13 +28,13 @@
         <div class="container">
             <div class="content has-text-centered">
                 <a class="icon" href="https://github.com/jharmon141">
-                    <i class="fa fa-github"></i>
+                    <icon name="github"></icon>
                 </a>
                 <a class="icon" href="https://www.linkedin.com/in/jeremy-harmon-b5553212a/">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <icon name="linkedin"></icon>
                 </a>
                 <a class="icon" href="https://twitter.com/jspacemanjr">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <icon name="twitter"></icon>
                 </a>
             </div>
         </div>
@@ -104,7 +104,6 @@ footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    height: 95px;
     width: 100%;
 }
 
@@ -115,11 +114,6 @@ footer {
   color: #929191;
   letter-spacing: 2px;
   height: 100%;
-}
-
-.fa {
-    color: #929191;
-    font-size: 18px !important;
 }
 
 .nav {
@@ -193,12 +187,17 @@ a.nav-item.is-tab.active.contact {
     }
 }
 
-i:hover {
+.fa-icon:hover {
     color: #ffff01 !important;
+}
+
+.fa-icon {
+    color: #929191;
 }
 
 .footer {
     padding: 20px 0px !important;
+    padding-top: 0px !important;
     background-color: white !important;
 }
 
@@ -214,4 +213,3 @@ i:hover {
 </style>
 <style src="bulma/css/bulma.css"></style>
 <style src="animate.css/animate.min.css"></style>
-<style src="font-awesome/css/font-awesome.css"></style>

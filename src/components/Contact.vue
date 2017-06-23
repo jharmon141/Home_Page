@@ -7,13 +7,13 @@
 
             <div class="content has-text-centered">
                 <a class="icon" href="https://github.com/jharmon141">
-                    <i class="fa fa-github"></i>
+                    <icon name="github" scale="5"></icon>
                 </a>
                 <a class="icon" href="https://www.linkedin.com/in/jeremy-harmon-b5553212a/">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <icon name="linkedin" scale="5"></icon>
                 </a>
                 <a class="icon" href="https://twitter.com/jspacemanjr">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <icon name="twitter" scale="5"></icon>
                 </a>
             </div>
 
@@ -89,14 +89,6 @@ form {
     margin-top: 75px;
 }
 
-.icon .fa {
-    font-size: 40px !important;
-}
-
-.icon {
-    width: 3rem;
-}
-
 .button {
     width: 100%;
     margin-bottom: 150px;
@@ -133,7 +125,17 @@ h2:hover {
     color: orange;
 }
 
-i:hover {
+a.icon {
+    font-size: 28px !important;
+    display: inline;
+}
+
+svg.fa-icon {
+    height: 50px;
+    width: 60px;
+}
+
+.fa-icon:hover {
     color: cyan !important;
 }
 </style>

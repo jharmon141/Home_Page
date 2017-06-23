@@ -4,13 +4,20 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import VeeValidate from 'vee-validate'
-require('!style!css!sass!font-awesome/scss/font-awesome.scss')
+// or import all icons if you don't care about bundle size
+import 'vue-awesome/icons'
 
+/* Register component with one of 2 methods */
+
+import Icon from 'vue-awesome/components/Icon'
+
+// globally (in your main .js file)
 Vue.config.productionTip = false
 
 Vue.use(VeeValidate)
 
-/* eslint-disable no-new */
+Vue.component('icon', Icon)
+
 new Vue({
   el: '#app',
   router,
