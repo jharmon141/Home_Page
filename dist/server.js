@@ -1,16 +1,12 @@
-var express = require('express');
-var app = express();
-var path = require('path');
-var bodyParser = require('body-parser');
-var router = express.Router();
-var serveStatic = require('serve-static');
-var port = process.env.PORT || 5000;
-var nodemailer = require('nodemailer');
-var history = require('connect-history-api-fallback');
-var dotenv = require('dotenv');
-dotenv.load();
-
-var gmailPass = process.env.GMAIL_PASS;
+const express = require('express');
+const app = express();
+const path = require('path');
+const bodyParser = require('body-parser');
+const router = express.Router();
+const serveStatic = require('serve-static');
+const port = process.env.PORT || 5000;
+const nodemailer = require('nodemailer');
+const history = require('connect-history-api-fallback');
 
 app.use(history());
 app.use(serveStatic(__dirname));
@@ -26,8 +22,8 @@ app.all('/*', function(req, res, next) {
     next();
 });
 
-// create reusable transporter object using the default SMTP transport
-var transporter = nodemailer.createTransport({
+let gmailPass = process.env.GMAIL_PASS;
+let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: 'jeremy.l.harmon@gmail.com',
@@ -41,9 +37,9 @@ router.use(function(req, res, next) {
 });
 
 app.route('/message/:sender/:senderEmail/:message').get(function(req,res) {
-    var sender = req.params.sender.trim().split('+').join(' ')
-    var message = req.params.message.trim().split('+').join(' ')
-    var mailOptions = {
+    let sender = req.params.sender.trim().split('+').join(' ')
+    let message = req.params.message.trim().split('+').join(' ')
+    let mailOptions = {
         from: 'jeremy.l.harmon@gmail.com', // sender address
         to: 'jeremy.l.harmon@gmail.com', // list of receivers
         subject: 'A new message from your home page!', // Subject line
