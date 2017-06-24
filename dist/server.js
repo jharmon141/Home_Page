@@ -7,10 +7,7 @@ const serveStatic = require('serve-static');
 const port = process.env.PORT || 5000;
 const nodemailer = require('nodemailer');
 const history = require('connect-history-api-fallback');
-let gmailPass = process.env.GMAIL_PASS;
-const dotenv = require('dotenv');
-dotenv.load();
-
+const gmailPass = process.env.GMAIL_PASS;
 
 app.use(history());
 app.use(serveStatic(__dirname));
