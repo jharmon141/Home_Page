@@ -7,6 +7,10 @@ const serveStatic = require('serve-static');
 const port = process.env.PORT || 5000;
 const nodemailer = require('nodemailer');
 const history = require('connect-history-api-fallback');
+const dotenv = require('dotenv');
+dotenv.load();
+const gmailPass = process.env.GMAIL_PASS;
+const yahooPass = process.env.YAHOO_PASS;
 
 app.use(history());
 app.use(serveStatic(__dirname));
@@ -22,11 +26,10 @@ app.all('/*', function(req, res, next) {
     next();
 });
 
-let gmailPass = process.env.GMAIL_PASS;
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'yahoo',
     auth: {
-        user: 'jeremy.l.harmon@gmail.com',
+        user: 'jspacemanjr@yahoo.com',
         pass: gmailPass 
     }
 });
@@ -40,7 +43,7 @@ app.route('/message/:sender/:senderEmail/:message').get(function(req,res) {
     let sender = req.params.sender.trim().split('+').join(' ')
     let message = req.params.message.trim().split('+').join(' ')
     let mailOptions = {
-        from: 'jeremy.l.harmon@gmail.com', // sender address
+        from: 'jspacemanjr@yahoo.com', // sender address
         to: 'jeremy.l.harmon@gmail.com', // list of receivers
         subject: 'A new message from your home page!', // Subject line
         html: `<p>From: ${sender}</p> <p>Sender E-mail: ${req.params.senderEmail}</p> <p>Message: ${message} </p>`
