@@ -10,7 +10,6 @@ const history = require('connect-history-api-fallback');
 const dotenv = require('dotenv');
 dotenv.load();
 const gmailPass = process.env.GMAIL_PASS;
-const yahooPass = process.env.YAHOO_PASS;
 
 app.use(history());
 app.use(serveStatic(__dirname));
@@ -27,9 +26,9 @@ app.all('/*', function(req, res, next) {
 });
 
 let transporter = nodemailer.createTransport({
-    service: 'yahoo',
+    service: 'gmail',
     auth: {
-        user: 'jspacemanjr@yahoo.com',
+        user: 'jeremy.l.harmon@gmail.com',
         pass: gmailPass 
     }
 });
@@ -43,7 +42,7 @@ app.route('/message/:sender/:senderEmail/:message').get(function(req,res) {
     let sender = req.params.sender.trim().split('+').join(' ')
     let message = req.params.message.trim().split('+').join(' ')
     let mailOptions = {
-        from: 'jspacemanjr@yahoo.com', // sender address
+        from: 'jeremy.l.harmon@gmail.com', // sender address
         to: 'jeremy.l.harmon@gmail.com', // list of receivers
         subject: 'A new message from your home page!', // Subject line
         html: `<p>From: ${sender}</p> <p>Sender E-mail: ${req.params.senderEmail}</p> <p>Message: ${message} </p>`
