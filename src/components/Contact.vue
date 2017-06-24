@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
 
@@ -87,11 +88,29 @@ export default {
             }
 
             else {
-                this.$swal({
-                    title: 'Success!',
-                    text: 'Your message has been sent!',
-                    type: 'success',
-                    timer: '5000'
+                let name = this.name.trim().split(' ').join('+')
+                let message = this.message.trim().split(' ').join('+')
+
+                axios.get(`/message/${name}/${this.email}/${message}`).then((res) => {
+                    if (res.data === 'Success!') {
+                        this.$swal({
+                            title: 'Success!',
+                            text: 'Your message has been sent!',
+                            type: 'success',
+                            timer: '5000'
+                        })
+                    }
+
+                    else {
+                        console.log(res)
+                        this.$swal({
+                            title: 'Error!',
+                            text: 'Oh no! Something went wrong. Please reload the page and try again!',
+                            type: 'error',
+                            timer: '5000'
+                        })
+
+                    }
                 })
             }
 
