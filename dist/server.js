@@ -1,16 +1,16 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const bodyParser = require('body-parser');
-const router = express.Router();
-const serveStatic = require('serve-static');
-const port = process.env.PORT || 5000;
-const nodemailer = require('nodemailer');
-const history = require('connect-history-api-fallback');
-const dotenv = require('dotenv');
+var express = require('express');
+var app = express();
+var path = require('path');
+var bodyParser = require('body-parser');
+var router = express.Router();
+var serveStatic = require('serve-static');
+var port = process.env.PORT || 5000;
+var nodemailer = require('nodemailer');
+var history = require('connect-history-api-fallback');
+var dotenv = require('dotenv');
 dotenv.load();
 
-const gmailPass = process.env.GMAIL_PASS;
+var gmailPass = process.env.GMAIL_PASS;
 
 app.use(history());
 app.use(serveStatic(__dirname));
