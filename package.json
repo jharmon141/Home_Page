@@ -25,6 +25,7 @@
     "vue-awesome": "^2.3.1",
     "vue-notifications": "^0.7.6",
     "vue-router": "^2.4.0",
+    "vue-sweetalert": "^0.1.17",
     "vuex": "^2.2.1"
   },
   "devDependencies": {

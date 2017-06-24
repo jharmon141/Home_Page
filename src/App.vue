@@ -36,6 +36,9 @@
                 <a class="icon" href="https://twitter.com/jspacemanjr">
                     <icon name="twitter"></icon>
                 </a>
+                <a class="icon" href="mailto:jeremy.l.harmon@gmail.com">
+                    <icon name="envelope"></icon>
+                </a>
             </div>
         </div>
     </footer>
@@ -122,14 +125,10 @@ footer {
     width: 100%;
     top: 0;
     z-index: -1;
-    height: 100px !important;
+    height: 65px !important;
 }
 
-a.nav-item.is-tab {
-    margin-top: 10px;
-}
 a.nav-item.is-tab.home {
-    margin-left: 20px !important;
 }
 
 .nav-item a.is-tab.home:hover, a.nav-item.is-tab.home:hover {
@@ -162,11 +161,11 @@ a.nav-item.is-tab.active.contact {
 }
 
 .nav-right {
-    margin-right: 100px;
+    margin-top: 5px;
 }
 
 .nav-toggle {
-    margin-top: 15px;
+    margin-top: -5px;
 }
 
 .nav-toggle:hover {
@@ -210,6 +209,11 @@ a.nav-item.is-tab.active.contact {
   opacity: 0;
   min-height: 100%;
 }
+
+hr {
+    background-color: white !important;
+}
+
 </style>
 <style src="bulma/css/bulma.css"></style>
 <style src="animate.css/animate.min.css"></style>

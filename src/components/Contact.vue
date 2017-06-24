@@ -3,6 +3,7 @@
     <div class="columns">
 
         <div class="animated slideInUp column is-4 is-offset-1">
+
             <h2>Send me a message!</h2>
 
             <div class="content has-text-centered">
@@ -15,6 +16,9 @@
                 <a class="icon" href="https://twitter.com/jspacemanjr">
                     <icon name="twitter" scale="5"></icon>
                 </a>
+                <a class="icon" href="mailto:jeremy.l.harmon@gmail.com">
+                    <icon name="envelope"></icon>
+                </a>
             </div>
 
         </div>
@@ -24,10 +28,10 @@
             <form>
 
                 <span class="error" v-show="errors.has('name')">{{ errors.first('name') }}</span>
-                <input :class="{ 'errorInput': errors.has('name') }" v-model="name" placeholder="Your Name" v-validate="'required'" type="text" name="name">
+                <input :class="{ 'errorInput': errors.has('name') }" v-model="name" placeholder="Name" v-validate="'required'" type="text" name="name">
                 <br>
                 <span class="error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
-                <input :class="{ 'errorInput': errors.has('email') }" v-model="email" placeholder="Your E-Mail Address" v-validate="'required|email'" type="text" name="email">
+                <input :class="{ 'errorInput': errors.has('email') }" v-model="email" placeholder="E-Mail Address" v-validate="'required|email'" type="text" name="email">
                 <br>
                 <span class="error" v-show="errors.has('message')">{{ errors.first('message') }}</span>
                 <textarea :class="{ 'errorInput': errors.has('message') }" v-model="message" placeholder="Message" v-validate="'required'" type="text" name="message"></textarea>
@@ -35,8 +39,6 @@
                 <span type="submit" class="button is-outlined is-danger" @click="submitMessage">&lt;Submit/&gt;</span>
 
             </form>
-
-            
 
         </div>
 
@@ -59,7 +61,39 @@ export default {
     methods: {
 
         submitMessage() {
-            console.log(this.errors)
+
+            if (this.name === '') {
+                this.$swal({
+                    title: 'Oops!',
+                    text: 'Please enter your name!',
+                    type: 'warning',
+                })
+            }
+
+            else if (this.email === '') {
+                this.$swal({
+                    title: 'Oops!',
+                    text: 'Please enter your e-mail address!',
+                    type: 'warning',
+                })
+            }
+
+            else if (this.message === '') {
+                this.$swal({
+                    title: 'Oops!',
+                    text: 'Please enter a message!',
+                    type: 'warning',
+                })
+            }
+
+            else {
+                this.$swal({
+                    title: 'Success!',
+                    text: 'Your message has been sent!',
+                    type: 'success',
+                    timer: '5000'
+                })
+            }
 
         }
 
@@ -86,12 +120,12 @@ input {
 }
 
 form {
-    margin-top: 75px;
+    margin-top: 56px;
 }
 
 .button {
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
     height: 50px !important;
 }
 
@@ -115,7 +149,7 @@ textarea {
 }
 
 h2 {
-    margin-top: 75px;
+    margin-top: 56px;
     margin-bottom: 30px !important;
     font-size: 24px !important;
     text-align: center;
@@ -138,4 +172,5 @@ svg.fa-icon {
 .fa-icon:hover {
     color: cyan !important;
 }
+
 </style>

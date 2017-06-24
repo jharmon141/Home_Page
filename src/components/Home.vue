@@ -26,7 +26,7 @@
 <style scoped>
 
 .columns {
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 img {

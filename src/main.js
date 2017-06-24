@@ -6,6 +6,7 @@ import router from './router'
 import VeeValidate from 'vee-validate'
 // or import all icons if you don't care about bundle size
 import 'vue-awesome/icons'
+import VueSweetAlert from 'vue-sweetalert'
 
 /* Register component with one of 2 methods */
 
@@ -15,6 +16,7 @@ import Icon from 'vue-awesome/components/Icon'
 Vue.config.productionTip = false
 
 Vue.use(VeeValidate)
+Vue.use(VueSweetAlert)
 
 Vue.component('icon', Icon)
 
