@@ -88,6 +88,7 @@ export default {
             }
 
             else {
+
                 let name = this.name.trim().split(' ').join('+')
                 let message = this.message.trim().split(' ').join('+')
 
@@ -98,6 +99,8 @@ export default {
                             text: 'Your message has been sent!',
                             type: 'success',
                             timer: '5000'
+                        }).then( () => {
+                            this.$router.push('/')
                         })
                     }
 
@@ -111,6 +114,11 @@ export default {
                         })
 
                     }
+
+                    this.name = ''
+                    this.email = ''
+                    this.message = ''
+
                 })
             }
 

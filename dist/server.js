@@ -1,16 +1,18 @@
 const express = require('express');
+const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const router = express.Router();
 const serveStatic = require('serve-static');
 const port = process.env.PORT || 5000;
-const gmailPass = process.env.GMAIL_PASS;
 const nodemailer = require('nodemailer');
+const history = require('connect-history-api-fallback');
 const dotenv = require('dotenv');
-
 dotenv.load();
 
-app = express();
+const gmailPass = process.env.GMAIL_PASS;
+
+app.use(history());
 app.use(serveStatic(__dirname));
 
 app.use(bodyParser.urlencoded({
@@ -33,7 +35,6 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-
 router.use(function(req, res, next) {
     console.log("\nClient Connecting\n...".yellow);
     next(); // w/o this we'd be stuck in this router forevs.
@@ -55,7 +56,6 @@ app.route('/message/:sender/:senderEmail/:message').get(function(req,res) {
             res.send(error);
             console.log(error);
         }
-        console.log('Message %s sent: %s', info.messageId, info.response);
         res.send('Success!');
     });
 
