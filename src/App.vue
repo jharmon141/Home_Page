@@ -119,6 +119,11 @@ footer {
   height: 100%;
 }
 
+.columns {
+    margin-top: 17% !important;
+    margin-bottom: 10% !important;
+}
+
 .nav {
     padding: 10px;
     position: fixed !important;

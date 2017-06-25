@@ -146,10 +146,6 @@ input {
     outline-color: green;
 }
 
-form {
-    margin-top: 56px;
-}
-
 .button {
     width: 100%;
     margin-bottom: 100px;
@@ -176,7 +172,6 @@ textarea {
 }
 
 h2 {
-    margin-top: 56px;
     margin-bottom: 30px !important;
     font-size: 24px !important;
     text-align: center;

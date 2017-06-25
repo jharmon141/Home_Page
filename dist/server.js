@@ -26,7 +26,9 @@ app.all('/*', function(req, res, next) {
 });
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
         user: 'jeremy.l.harmon@gmail.com',
         pass: gmailPass 
@@ -45,7 +47,7 @@ app.route('/message/:sender/:senderEmail/:message').get(function(req,res) {
         from: 'jeremy.l.harmon@gmail.com', // sender address
         to: 'jeremy.l.harmon@gmail.com', // list of receivers
         subject: 'A new message from your home page!', // Subject line
-        html: `<p>From: ${sender}</p> <p>Sender E-mail: ${req.params.senderEmail}</p> <p>Message: ${message} </p>`
+        html: `<p>From: ${sender}</p> <p>E-mail: ${req.params.senderEmail}</p> <p>Message: ${message} </p>`
     };
 
     // send mail with defined transport object

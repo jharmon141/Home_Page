@@ -25,10 +25,6 @@
 
 <style scoped>
 
-.columns {
-    margin-bottom: 10%;
-}
-
 img {
     margin-top: 30px !important;
     border-radius: 50%;
@@ -63,8 +59,5 @@ h1 {
     font-size: 36px !important;
 }
 
-.columns {
-    margin-top: 16%;
-}
 </style>
 <style src="animate.css/animate.min.css"></style>
