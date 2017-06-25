@@ -5,7 +5,9 @@
 
         <div class="animated flipInY column is-4 is-offset-1">
 
-            <img class="cvimg" src="../assets/comicvault.847936e copy.png">
+            <a href="http://comicvault.cool" target="blank">
+                <img class="cvimg" src="../assets/comicvault.847936e copy.png">
+            </a>
 
         </div>
 
@@ -23,7 +25,10 @@
             <a href="http://www.apollodata.com/" target="blank"><img class="techLogo" src="../assets/agcdgv0j6vh2q55ygu9i.png"></a>
             <a href="http://graph.cool/" target="blank"><img class="techLogo" src="../assets/graphcool-logo-E2E92C1A2B-seeklogo.com.png"></a>
             <a href="https://auth0.com/" target="blank"><img class="techLogo" src="../assets/805765c256ff8617fcad483b5476faf2.png"></a>
-
+            <br>
+            <p>Code:</p>
+            <a href="https://github.com/jharmon141/Home_Page" target="blank">github/jharmon141/comic-vault</a>
+            
         </div>
 
     </div>
@@ -55,7 +60,7 @@ export default {
 }
 
 a {
-    color: green !important;
+    color: dodgerblue !important;
 }
 
 a:hover {
@@ -69,6 +74,6 @@ h2 {
 }
 
 h2:hover {
-    color: dodgerblue;
+    color: red;
 }
 </style>
