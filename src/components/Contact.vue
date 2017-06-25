@@ -148,7 +148,6 @@ input {
 
 .button {
     width: 100%;
-    margin-bottom: 100px;
     height: 50px !important;
 }
 
@@ -166,7 +165,6 @@ textarea {
     width: 100%;
     font-size: 18px;
     border: solid 1px #bbb;
-    margin-bottom: 25px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding: 9px;
 }

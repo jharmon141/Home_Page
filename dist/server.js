@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 const history = require('connect-history-api-fallback');
 const dotenv = require('dotenv');
 dotenv.load();
-const gmailPass = process.env.GMAIL_PASS;
+const mailgunPass = process.env.MAILGUN_PASS;
 
 app.use(history());
 app.use(serveStatic(__dirname));
@@ -26,10 +26,10 @@ app.all('/*', function(req, res, next) {
 });
 
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'Mailgun',
     auth: {
-        user: 'jeremy.l.harmon@gmail.com',
-        pass: gmailPass 
+        user: 'postmaster@sandboxd41e30f3953d4cd5a6bdf01a77f5a264.mailgun.org', // postmaster@sandbox[base64 string].mailgain.org
+        pass: mailgunPass // You set this.
     }
 });
 
@@ -41,22 +41,22 @@ router.use(function(req, res, next) {
 app.route('/message/:sender/:senderEmail/:message').get(function(req,res) {
     let sender = req.params.sender.trim().split('+').join(' ')
     let message = req.params.message.trim().split('+').join(' ')
-    let mailOptions = {
-        from: 'jeremy.l.harmon@gmail.com', // sender address
-        to: 'jeremy.l.harmon@gmail.com', // list of receivers
-        subject: 'A new message from your home page!', // Subject line
+
+    message = {
+        from: 'postmaster@sandboxd41e30f3953d4cd5a6bdf01a77f5a264.mailgun.org',
+        to: 'jeremy.l.harmon@gmail.com', // comma separated list
+        subject: 'A new message from your home page!',
         html: `<p>From: ${sender}</p> <p>E-mail: ${req.params.senderEmail}</p> <p>Message: ${message} </p>`
     };
-
-    // send mail with defined transport object
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(message, function(error, info){
         if (error) {
-            res.send(error);
             console.log(error);
+            res.send(error);
+        } else {
+            console.log('Sent: ' + info.response);
+            res.send("Success!");
         }
-        res.send('Success!');
     });
-
 });
 
 app.listen(port);

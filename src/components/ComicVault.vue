@@ -17,12 +17,12 @@
             <br>
             <p>Technologies Used:</p>
             <a href="https://vuejs.org/" target="blank"><img class="techLogo" src="../assets/logo copy.png"></a>
+            <a href="https://bulma.io/" target="blank"><img class="techLogo" src="../assets/bulma.png"></a>
             <a href="https://webpack.github.io/" target="blank"><img class="techLogo" src="../assets/webpack.svg.png"></a>
             <a href="http://graphql.org/" target="blank"><img class="techLogo" src="../assets/GraphQL_Logo.svg copy.png"></a>
             <a href="http://www.apollodata.com/" target="blank"><img class="techLogo" src="../assets/agcdgv0j6vh2q55ygu9i.png"></a>
             <a href="http://graph.cool/" target="blank"><img class="techLogo" src="../assets/graphcool-logo-E2E92C1A2B-seeklogo.com.png"></a>
             <a href="https://auth0.com/" target="blank"><img class="techLogo" src="../assets/805765c256ff8617fcad483b5476faf2.png"></a>
-            <a href="https://bulma.io/" target="blank"><img class="techLogo" src="../assets/bulma.png"></a>
 
         </div>
 

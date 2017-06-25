@@ -121,7 +121,7 @@ footer {
 
 .columns {
     margin-top: 17% !important;
-    margin-bottom: 10% !important;
+    margin-bottom: 13% !important;
 }
 
 .nav {
