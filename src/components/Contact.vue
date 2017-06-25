@@ -36,7 +36,8 @@
                 <span class="error" v-show="errors.has('message')">{{ errors.first('message') }}</span>
                 <textarea :class="{ 'errorInput': errors.has('message') }" v-model="message" placeholder="Message" v-validate="'required'" type="text" name="message"></textarea>
                 <br>
-                <span type="submit" class="button is-outlined is-danger" @click="submitMessage">&lt;Submit/&gt;</span>
+                <span v-if="loading" type="submit" class="button is-outlined is-danger"><img class="loading" src="../assets/img_loading.gif"></span>
+                <span v-else type="submit" class="button is-outlined is-danger" @click="submitMessage">&lt;Submit/&gt;</span>
 
             </form>
 
@@ -57,6 +58,7 @@ export default {
         name: '',
         email: '',
         message: '',
+        loading: false,
     }),
 
     methods: {
@@ -89,11 +91,14 @@ export default {
 
             else {
 
+                this.loading = true
+
                 let name = this.name.trim().split(' ').join('+')
                 let message = this.message.trim().split(' ').join('+')
 
                 axios.get(`/message/${name}/${this.email}/${message}`).then((res) => {
                     if (res.data === 'Success!') {
+                        this.loading = false
                         this.$swal({
                             title: 'Success!',
                             text: 'Your message has been sent!',
@@ -106,6 +111,7 @@ export default {
 
                     else {
                         console.log(res)
+                        this.loading = false
                         this.$swal({
                             title: 'Error!',
                             text: 'Oh no! Something went wrong. Please reload the page and try again!',
@@ -114,10 +120,6 @@ export default {
                         })
 
                     }
-
-                    this.name = ''
-                    this.email = ''
-                    this.message = ''
 
                 })
             }
@@ -131,6 +133,10 @@ export default {
 </script>
 
 <style scoped>
+
+.loading {
+    height: 75px;
+} 
 
 .error {
     color: red;
