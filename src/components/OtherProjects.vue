@@ -110,21 +110,6 @@
 
         </div>
 
-            <h2>&lt;/&gt;</h2>
-        <div class="columns">
-            <div class="column is-4">
-
-            </div>
-
-            <div class="column is-4">
-
-            </div>
-
-            <div class="column is-4">
-
-            </div>
-
-        </div>
     </div>
 
 </template>
