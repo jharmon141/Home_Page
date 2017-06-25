@@ -16,7 +16,7 @@
 
             <div class="column is-4">
                 <a href="https://github.com/jharmon141/cool_vue" target="blank"><h3>&lt;Cool Vue/&gt;</h3></a>
-                <a href="https://https://github.com/jharmon141/cool_vue/" target="blank"><img class="projectLogo" src="../assets/Screen Shot 2017-06-25 at 3.58.25 PM.png"></a>
+                <a href="https://github.com/jharmon141/cool_vue/" target="blank"><img class="projectLogo" src="../assets/Screen Shot 2017-06-25 at 3.58.25 PM.png"></a>
                 <br>
                 <br>
                 <div class="projectBlurb">
@@ -110,8 +110,8 @@
 
         </div>
 
+            <h2>&lt;/&gt;</h2>
         <div class="columns">
-
             <div class="column is-4">
 
             </div>
