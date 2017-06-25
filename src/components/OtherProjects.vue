@@ -146,7 +146,7 @@ p {
 }
 
 h2 {
-    margin-bottom: 30px !important;
+    margin-bottom: 100px !important;
     font-size: 24px !important;
     text-align: center;
 }
