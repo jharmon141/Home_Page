@@ -149,6 +149,7 @@ input {
 .button {
     width: 100%;
     height: 50px !important;
+    margin-top: 15px;
 }
 
 input {
