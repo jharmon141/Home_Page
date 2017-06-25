@@ -1,7 +1,7 @@
 
 <template>
 
-    <div class="columns">
+    <div class="columns main">
 
         <div class="animated flipInY column is-4 is-offset-1">
 
@@ -70,6 +70,7 @@ p {
 a:hover {
     color: red !important;
 }
+
 h2 {
     margin-bottom: 30px !important;
     font-size: 24px !important;

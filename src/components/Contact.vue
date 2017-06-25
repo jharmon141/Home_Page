@@ -1,6 +1,6 @@
 <template>
 
-    <div class="columns">
+    <div class="columns main">
 
         <div class="animated slideInUp column is-4 is-offset-1">
 

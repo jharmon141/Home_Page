@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <div class="columns">
+        <div class="columns main">
 
             <div class="animated slideInDown column is-4 is-offset-1">
                 <img height="250px" width="250px" src="../assets/IMG_0501 copy.jpg">
@@ -40,19 +40,11 @@ h2 {
     text-align: center;
 }
 
-h2:hover {
-    color: orange;
-}
-
 p {
     text-align: left;
     font-size: 14px;
     line-height: 35px;
     margin-left: 5px;
-}
-
-p:hover {
-    background-color: cyan;
 }
 
 h1 {

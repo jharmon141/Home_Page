@@ -27,16 +27,16 @@
     <footer class="footer">
         <div class="container">
             <div class="content has-text-centered">
-                <a class="icon" href="https://github.com/jharmon141">
+                <a class="icon" href="https://github.com/jharmon141" target="blank">
                     <icon name="github"></icon>
                 </a>
                 <a class="icon" href="https://www.linkedin.com/in/jeremy-harmon-b5553212a/">
                     <icon name="linkedin"></icon>
                 </a>
-                <a class="icon" href="https://twitter.com/jspacemanjr">
+                <a class="icon" href="https://twitter.com/jspacemanjr" target="blank">
                     <icon name="twitter"></icon>
                 </a>
-                <a class="icon" href="mailto:jeremy.l.harmon@gmail.com">
+                <a class="icon" href="mailto:jeremy.l.harmon@gmail.com" target="blank">
                     <icon name="envelope"></icon>
                 </a>
             </div>
@@ -119,7 +119,7 @@ footer {
   height: 100%;
 }
 
-.columns {
+.main {
     margin-top: 17% !important;
     margin-bottom: 13% !important;
 }
