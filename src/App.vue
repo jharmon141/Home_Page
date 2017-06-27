@@ -167,6 +167,11 @@ a.nav-item.is-tab.active.contact {
 
 .nav-right {
     margin-top: 5px;
+    overflow: hidden !important;
+}
+
+.nav-left {
+    overflow: hidden !important;
 }
 
 .nav-toggle {
