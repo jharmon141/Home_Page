@@ -164,4 +164,8 @@ h3:hover {
 a {
     color: dodgerblue !important;
 }
+
+a:hover {
+    color: red !important;
+}
 </style>
