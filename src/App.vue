@@ -30,13 +30,13 @@
                 <a class="icon" href="https://github.com/jharmon141" target="blank">
                     <icon name="github"></icon>
                 </a>
-                <a class="icon" href="https://www.linkedin.com/in/jeremy-harmon-b5553212a/">
+                <a class="icon" href="https://www.linkedin.com/in/jeremy-harmon-b5553212a/" target="blank">
                     <icon name="linkedin"></icon>
                 </a>
                 <a class="icon" href="https://twitter.com/jspacemanjr" target="blank">
                     <icon name="twitter"></icon>
                 </a>
-                <a class="icon" href="mailto:jeremy.l.harmon@gmail.com" target="blank">
+                <a class="icon" href="mailto:jeremy.l.harmon@gmail.com">
                     <icon name="envelope"></icon>
                 </a>
             </div>
@@ -56,6 +56,7 @@ export default {
     }),
 
     computed: {
+
         home() {
             return this.$route.path === '/'
         },
