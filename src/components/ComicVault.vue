@@ -12,7 +12,7 @@
 
         <div class="animated flipInX column is-5">
 
-            <a href="https://github.com/jharmon141/comic-vault" target="blank"><h2>&lt;Comic Vault/&gt;</h2></a>
+            <a href="https://comicvault.cool" target="blank"><h2>&lt;Comic Vault/&gt;</h2></a>
 
             <p>Comic Vault is a personal comic book archiving tool. It uses the <a href="https://comicvine.gamespot.com/" target="blank">Comic Vine API</a> to allow users to search for the individual comic issues they want to add to their customizable collections.</p>
             <br>
