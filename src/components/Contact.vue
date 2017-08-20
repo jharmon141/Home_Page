@@ -49,22 +49,16 @@
 
 <script>
 import axios from 'axios'
-
 export default {
-
     name: 'Contact',
-
     data: () => ({
         name: '',
         email: '',
         message: '',
         loading: false,
     }),
-
     methods: {
-
         submitMessage() {
-
             if (this.name === '') {
                 this.$swal({
                     title: 'Oops!',
@@ -72,7 +66,6 @@ export default {
                     type: 'warning',
                 })
             }
-
             else if (this.email === '') {
                 this.$swal({
                     title: 'Oops!',
@@ -80,7 +73,6 @@ export default {
                     type: 'warning',
                 })
             }
-
             else if (this.message === '') {
                 this.$swal({
                     title: 'Oops!',
@@ -88,14 +80,10 @@ export default {
                     type: 'warning',
                 })
             }
-
             else {
-
                 this.loading = true
-
                 let name = this.name.trim().split(' ').join('+')
                 let message = this.message.trim().split(' ').join('+')
-
                 axios.get(`/message/${name}/${this.email}/${message}`).then((res) => {
                     if (res.data === 'Success!') {
                         this.loading = false
@@ -108,7 +96,6 @@ export default {
                             this.$router.push('/')
                         })
                     }
-
                     else {
                         console.log(res)
                         this.loading = false
@@ -118,46 +105,34 @@ export default {
                             type: 'error',
                             timer: '5000'
                         })
-
                     }
-
                 })
             }
-
         }
-
     }
-
 }
-
 </script>
 
 <style scoped>
-
 .loading {
     height: 75px;
 } 
-
 .error {
     color: red;
     font-size: 12px;
     text-align: left !important;
 }
-
 .errorInput {
     outline-color: red;
 }
-
 input {
     outline-color: green;
 }
-
 .button {
     width: 100%;
     height: 50px !important;
     margin-top: 15px;
 }
-
 input {
     margin-bottom: 25px;
     height: 50px;
@@ -165,7 +140,6 @@ input {
     width: 100%;
     padding: 9px;
 }
-
 textarea {
     outline-color: green;
     height: 200px;
@@ -175,29 +149,23 @@ textarea {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding: 9px;
 }
-
 h2 {
     margin-bottom: 30px !important;
     font-size: 24px !important;
     text-align: center;
 }
-
 h2:hover {
     color: orange;
 }
-
 a.icon {
     font-size: 28px !important;
     display: inline;
 }
-
 svg.fa-icon {
     height: 50px;
     width: 60px;
 }
-
 .fa-icon:hover {
     color: cyan !important;
 }
-
 </style>

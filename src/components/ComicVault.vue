@@ -39,7 +39,6 @@
 
 export default {
     name: 'ComicVault',
-
 }
 
 </script>

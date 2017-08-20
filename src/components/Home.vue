@@ -4,7 +4,7 @@
         <div class="columns main">
 
             <div class="animated slideInDown column is-4 is-offset-1">
-                <img height="250px" width="250px" src="../assets/IMG_0501 copy.jpg">
+                <img height="250px" width="250px" src="../assets/IMG_0501 copy 2.jpg">
             </div>
 
             <div class="animated slideInUp column is-5">
@@ -16,10 +16,18 @@
 
     </div>
 
-
 </template>
 
 <script>
+import VueImgLoader from 'vue-img-loader'
+
+export default {
+
+   components: {
+      'vue-img-loader': VueImgLoader
+   }
+
+}
 
 </script>
 
