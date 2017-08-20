@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="columns main">
 
             <div class="animated slideInDown column is-4 is-offset-1">
@@ -15,19 +14,9 @@
         </div>
 
     </div>
-
 </template>
 
 <script>
-import VueImgLoader from 'vue-img-loader'
-
-export default {
-
-   components: {
-      'vue-img-loader': VueImgLoader
-   }
-
-}
 
 </script>
 
