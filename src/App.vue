@@ -4,7 +4,11 @@
 
       <nav class="nav">
           <div class="nav-left">
-              <router-link  v-on:click.native="hideMenu" :key="$route.path" to="/"><a :class="{ 'active': home } "class="nav-item home is-tab">&lt;Jeremy/&gt;</a></router-link>
+              <router-link  
+                  v-on:click.native="hideMenu" 
+                  :key="$route.path" to="/">
+                  <a :class="{ 'active': home } "class="nav-item home is-tab">&lt;Jeremy/&gt;</a>
+              </router-link>
           </div>
 
           <span @click="toggleMenu" class="nav-toggle">
@@ -14,8 +18,20 @@
           </span>
 
           <div class="nav-right nav-menu" :class="menuActive">
-              <router-link v-on:click.native="hideMenu" :key="$route.path" to="/projects"><a  :class="{ 'active': projects } "class="nav-item projects is-tab">&lt;Projects/&gt;</a></router-link>
-              <router-link v-on:click.native="hideMenu" :key="$route.path" to="/contact"><a :class="{ 'active': contact } "class="nav-item contact is-tab">&lt;Contact/&gt;</a></router-link>
+              <router-link 
+                  v-on:click.native="hideMenu" 
+                  :key="$route.path" to="/projects">
+                  <a  :class="{ 'active': projects }"
+                      class="nav-item projects is-tab">
+                      &lt;Projects/&gt;</a>
+              </router-link>
+
+              <router-link 
+                  v-on:click.native="hideMenu" 
+                  :key="$route.path" 
+                  to="/contact">
+                  <a :class="{ 'active': contact } "class="nav-item contact is-tab">&lt;Contact/&gt;</a>
+              </router-link>
 
           </div>
       </nav>
@@ -46,7 +62,6 @@
 </template>
 
 <script>
-import store from './store/index.js'
 
 export default {
     name: 'app',
@@ -167,7 +182,6 @@ a.nav-item.is-tab.active.contact {
 }
 
 .nav-right {
-    margin-top: 5px;
     overflow: hidden !important;
 }
 
